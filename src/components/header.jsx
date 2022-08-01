@@ -46,7 +46,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed z-50 w-screen  p-3  md:p-6 px-16">
+    <header className="fixed z-50 w-screen  p-3  md:p-6 px-16 bg-primary">
       {/* desktop */}
       <div className="hidden md:flex w-full h-full items-center justify-between">
         <Link to={"/"} className="flex items-center gap-2">
@@ -113,7 +113,10 @@ const Header = () => {
               >
                 {user && user.email === "sshylesh34@gmail.com" && (
                   <Link to={"/createItem"}>
-                    <p className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-textColor text-base">
+                    <p
+                      onClick={() => setIsMenu(false)}
+                      className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-textColor text-base"
+                    >
                       New Item <MdAdd />
                     </p>
                   </Link>

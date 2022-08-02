@@ -10,7 +10,7 @@ import { useStateValue } from "../context/StateProvider";
 const MenuContainer = () => {
   const [filter, setFilter] = useState("chicken");
   //   useEffect(() => {}, [filter]);
-  const [{ foodItems }, dispatch] = useStateValue();
+  const [{ foodItems }] = useStateValue();
 
   return (
     <section className="w-full m-6" id="menu">

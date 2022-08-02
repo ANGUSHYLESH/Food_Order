@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState,  useEffect } from "react";
 import HomeContainer from "./HomeContainer";
 
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
@@ -12,7 +12,7 @@ import CartContainer from "./CartContainer";
 
 
 const MainContainer = () => {
-  const [{ foodItems, cartShow }, dispatch] = useStateValue();
+  const [{ foodItems, cartShow }] = useStateValue();
   const [scrollValue, setScrollValue] = useState(0);
 
   useEffect(() => {}, [scrollValue,cartShow]);

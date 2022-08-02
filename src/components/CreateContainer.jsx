@@ -35,7 +35,7 @@ const CreateContainer = () => {
   const [alertStatus, setAlertStatus] = useState("danger");
   const [msg, setMsg] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [{ foodItems }, dispatch] = useStateValue();
+  const [dispatch] = useStateValue();
 
   const uploadImage = (e) => {
     setIsLoading(true);
@@ -48,6 +48,7 @@ const CreateContainer = () => {
       (snapshot) => {
         const uploadProgress =
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        console.log(uploadProgress);
       },
       (error) => {
         console.log(error);

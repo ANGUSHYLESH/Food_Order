@@ -1,5 +1,6 @@
 import React from "react";
 import Delivery from "../images/delivery.png";
+
 import BG from "../images/heroBg.png";
 import { data } from "../utils/data";
 const HomeContainer = () => {
@@ -28,7 +29,7 @@ const HomeContainer = () => {
           </span>
         </p>
         <p className="text-base text-textColor text-center md:text-left md:w-[80%]">
-          In this free course, we are going to develop a full stack food
+          A full stack food
           delivery application using Reactjs, Firebase, Framer motion, Tailwind
           css. This projects allows to the user to add new items and to maintain
           all the things over the firestore cloud database

@@ -1,6 +1,14 @@
-import { getApp, getApps, initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
+import {
+  getApp,
+  getApps,
+  initializeApp
+} from "firebase/app";
+import {
+  getFirestore
+} from "firebase/firestore";
+import {
+  getStorage
+} from "firebase/storage";
 const firebaseConfig = {
   apiKey: "AIzaSyCyEwa0-IzJHjHcrEJszhBsvubjOcBH0gc",
   authDomain: "restaurantapp-520f5.firebaseapp.com",
@@ -17,4 +25,8 @@ const firestore = getFirestore(app);
 
 const storage = getStorage(app);
 
-export { app, firestore, storage };
+export {
+  app,
+  firestore,
+  storage
+};

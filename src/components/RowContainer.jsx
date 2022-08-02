@@ -13,21 +13,21 @@ const RowContainer = ({ flag, data, scrollValue }) => {
 
   const [{ cartItems }, dispatch] = useStateValue();
 
-  // const addtocart = () => {
-  //   dispatch({
-  //     type: actionType.SET_CARTITEMS,
-  //     cartItems: items,
-  //   });
-  //   localStorage.setItem("cartItems", JSON.stringify(items));
-  // };
+  const addtocart = () => {
+    dispatch({
+      type: actionType.SET_CARTITEMS,
+      cartItems: items,
+    });
+    localStorage.setItem("cartItems", JSON.stringify(items));
+  };
 
   useEffect(() => {
     rowContainer.current.scrollLeft += scrollValue;
   }, [scrollValue]);
 
-//   useEffect(() => {
-//     addtocart();
-//   }, [items]);
+  useEffect(() => {
+    addtocart();
+  }, [items]);
 
   return (
     <div
@@ -60,7 +60,7 @@ const RowContainer = ({ flag, data, scrollValue }) => {
                 className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center cursor-pointer hover:shadow-md -mt-8"
                 onClick={() => setItems([...cartItems, item])}
               >
-                <MdShoppingBasket className="text-white" />
+                <MdShoppingBasket className="text-white"  />
               </motion.div>
             </div>
 
